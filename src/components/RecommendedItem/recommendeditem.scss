@@ -1,0 +1,45 @@
+@import "../../styles/mixins";
+
+.recommended--item--container {
+    width: 100%;
+
+    .recommended--item--display {
+        @include flexDisplay(row);
+        align-items: center;
+
+        .recommended--item--image {
+            @include flexDisplay(row);
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 3em;
+                height: 3em;
+                object-fit: contain;
+
+            }
+        }
+
+
+        .recommended--item--info {
+            @include flexDisplay(column);
+            justify-content: flex-start;
+            margin-left: 1.3em;
+            
+
+            .recommended--item--title {
+                font-size: 0.9em;
+            }
+
+            .space--div {
+                padding: 0.2em 0;
+            }
+
+            .recommended--item-description {
+                font-size: 0.8em;
+                font-weight: 300;
+            }
+
+        }
+    }
+}

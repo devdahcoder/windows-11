@@ -1,0 +1,10 @@
+.pinned--list--container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 0.8em;
+    padding: 0.4em 0;
+    // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    
+}

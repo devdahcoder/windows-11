@@ -1,0 +1,68 @@
+@import "../../styles/mixins";
+
+.user--container {
+    width: 100%;
+    background: hsla(227, 50%, 27%, 0.63);
+    backdrop-filter: blur(200px);
+    border-radius: 6.09875px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    .user--display {
+        @include flexDisplay(row);
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0.5em 0;
+
+        .user--profile--container {
+            @include flexDisplay(row);
+            align-items: center;
+
+            .user--profile--image {
+                $profile-size: 2.5em;
+                width: $profile-size;
+                height: $profile-size;
+                background-color: #fafafa;
+                background-color: rgba(var(--b3f, 250, 250, 250), 1);
+                border-radius: 50%;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                display: block;
+                -webkit-box-flex: 0;
+                -webkit-flex: 0 0 auto;
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+                overflow: hidden;
+                position: relative;
+                margin-right: 1em;
+
+                .user--profile {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+            .user--profile--name {
+                @include flexDisplay(row);
+                align-items: center;
+                font-size: 0.8rem;
+                font-weight: 300;
+                .user--profile--name--span {
+                    color: hsl(0, 0%, 100%);
+                }
+            }
+        }
+
+        .power--button--container {
+            .power--button {
+                .power--button {
+                    padding: 0.4em;
+                }
+            }
+        }
+    }
+}
